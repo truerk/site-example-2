@@ -195,7 +195,7 @@ body{
   color: #062033;
 }
 .features-block-logo{
-  /*padding: 0px 15px;*/
+  padding: 0px 15px;
 }
 .features-block-header{
   font-size: 20px;
@@ -735,6 +735,11 @@ body{
 @media screen and (min-width: 421px) {  
   .menu1{  
       display: none !important;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .features-content-block .features-block-logo{
+   /* margin-right: 10px;*/
   }
 }
 @media screen and (max-width: 1170px) {
