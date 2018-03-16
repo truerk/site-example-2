@@ -52,9 +52,19 @@
         <div class="header-container">
             <div class="header-box">
                <div class="header-content">                
-                    <div class="header-label">
+                    <div id="ver-cont-1" class="header-label">
                         <div class="header-label-1">Meet <b>Brandi</b>!</div>
                         <div class="header-label-2"><span>/creative</span> one page template</div>
+                        <div class="header-label-3">We are a tearn of professionals</div>
+                    </div>
+                    <div id="ver-cont-2" class="header-label">
+                        <div class="header-label-1">Meet <b>Brandi</b>!</div>
+                        <div class="header-label-2"><span>/creative</span> two page template</div>
+                        <div class="header-label-3">We are a tearn of professionals</div>
+                    </div>
+                    <div id="ver-cont-3" class="header-label">
+                        <div class="header-label-1">Meet <b>Brandi</b>!</div>
+                        <div class="header-label-2"><span>/creative</span> three page template</div>
                         <div class="header-label-3">We are a tearn of professionals</div>
                     </div>
                     <div class="header-social">
@@ -67,9 +77,9 @@
                 
             </div>
             <div class="vertical-dots">
-                    <span class="dot dot-active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <span id="ver-1" class="dot dot-active"></span>
+                    <span id="ver-2" class="dot"></span>
+                    <span id="ver-3" class="dot"></span>
                 </div>        
         </div>
     </div>
@@ -396,10 +406,49 @@ exclusive for kreativeshowcase</div>
    
 
 
-    <div class="menu-fon"></div>
+    
 
 <script src="js/jquery.js"></script>
 <script type="text/javascript">
+
+    /* --- слайдер --- */
+    $('#ver-cont-1').fadeIn();
+
+    $('#ver-2').click(function(){
+        $('#ver-cont-1').fadeOut();
+        $('#ver-cont-3').fadeOut();
+        setTimeout(function(){
+            $('#ver-1').removeClass('dot-active');
+            $('#ver-3').removeClass('dot-active');
+            $('#ver-2').addClass('dot-active');
+            $('#ver-cont-2').fadeIn();
+        }, 500);
+        
+    });
+
+    $('#ver-1').click(function(){
+        $('#ver-cont-2').fadeOut();
+        $('#ver-cont-3').fadeOut();
+        setTimeout(function(){
+            $('#ver-2').removeClass('dot-active');
+            $('#ver-3').removeClass('dot-active');
+            $('#ver-1').addClass('dot-active');
+            $('#ver-cont-1').fadeIn();
+        }, 500);
+    });
+
+    $('#ver-3').click(function(){
+        $('#ver-cont-1').fadeOut();
+        $('#ver-cont-2').fadeOut();
+        setTimeout(function(){
+            $('#ver-1').removeClass('dot-active');
+            $('#ver-2').removeClass('dot-active');
+            $('#ver-3').addClass('dot-active');
+            $('#ver-cont-3').fadeIn();
+        }, 500);
+    });
+
+    /* --- открытие меню --- */
     $(document).ready(function(){
         $('.burger-button').click(function(){
             $('.menu1').fadeIn();
@@ -409,6 +458,19 @@ exclusive for kreativeshowcase</div>
             $('.menu1').fadeOut();
         });    
     });
+
+    /* --- ховер эффекты --- */
+        $('.works-img-container').hover(function(){
+            $(this).find(".works-hover").css('opacity','1');
+        },function(){
+            $(this).find(".works-hover").css('opacity','0');
+        });
+
+        $('.team-block-avatar').hover(function(){
+            $(this).find(".team-hover").css('opacity','1');
+        },function(){
+            $(this).find(".team-hover").css('opacity','0');
+        });
 
     
 </script>
@@ -428,38 +490,5 @@ exclusive for kreativeshowcase</div>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsTWWXsi2-5_Q2ekc3pplY7SpRXbCNtsQ&callback=initMap">
     </script>
-<script type="text/javascript">
-    $(document).ready(function(){
-
-        $('.works-img-container').hover(function(){
-            $(this).find(".works-hover").css('opacity','1');
-        },function(){
-            $(this).find(".works-hover").css('opacity','0');
-        });
-
-        $('.team-block-avatar').hover(function(){
-            $(this).find(".team-hover").css('opacity','1');
-        },function(){
-            $(this).find(".team-hover").css('opacity','0');
-        });
-
-        /* --- открытие меню --- */
-        $('#open-menu').click(function(){
-            $('.menu-fon').fadeIn(10);
-            $('.menu-mobile').css('animation','open-menu 1s ease-in-out');            
-            setTimeout(function(){
-                $('.menu-mobile').fadeIn();
-            }, 100);            
-        });
-        /* --- закрытие меню --- */
-        $('.menu-fon').click(function(){
-            $('.menu-mobile').css('animation','close-menu 1s ease-in-out');
-            setTimeout(function(){
-                $('.menu-mobile').css('display', 'none');
-            }, 500);            
-            $('.menu-fon').css('display', 'none');
-        });
-    });
-</script>
 </body>
 </html>  
