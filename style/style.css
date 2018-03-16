@@ -270,12 +270,59 @@ body{
   flex-wrap: wrap;
   margin-top: 35px;
 }
+.works-img-container{
+  position: relative;
+}
 .works-img img{
   max-width: 100%;
 }
 .work-heart{
   margin-top: 25px;
 }
+/* --- hover work --- */
+.works-hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  background-color: rgba(14,180,147,0.95);  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+}
+.works-hover img{
+}
+.works-hover-caption{
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.works-hover-label{
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+/*.works-hover{
+  padding: 10px;
+  max-width: 270px;
+  height: 300px;
+  top: 300px;
+  margin-top: -300px;
+  position: relative;
+  background-color: rgba(14,180,147,0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  opacity: 0;
+  cursor: pointer;
+}*/
 
 /* --- TEAM --- */
 .team{
@@ -303,10 +350,10 @@ body{
 .team-block{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .team-block{
-  text-align: center;
   color: #062033;
 }
 .team-block-name{
@@ -319,6 +366,49 @@ body{
 }
 .team-dot{
   margin-top: 40px;
+}
+.team-block-avatar img{
+}
+
+/* --- hover --- */
+.team-hover{
+  padding: 10px;
+  max-width: 270px;
+  height: 300px;
+  top: 300px;
+  margin-top: -300px;
+  position: relative;
+  background-color: rgba(14,180,147,0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  opacity: 0;
+  cursor: pointer;
+}
+.team-hover-caption{
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.team-hover-label{
+  color: #fff;
+  font-size: 16px;
+}
+.team-hover-social{
+  display: flex;
+}
+.social-hover{
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-hover{
+  margin-right: 5px;
 }
 
 /* --- facts --- */
@@ -941,7 +1031,7 @@ body{
     height: 50px;
   }
 
-
+  /* --- hover эффекты --- */
 }
 
 
