@@ -25,16 +25,29 @@
                     <img src="img/header/Brandi.png" alt="Brandi.png">
                 </div>
                 <div class="tag">I’am your tag line</div>
+                <div class="burger-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div class="menu">
-                <a href="#home">Home</a>
-                <a href="#features">Features</a>
-                <a href="#works">Works</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
+                <a href="/">Home</a>
+                <a href="/">Features</a>
+                <a href="/">Works</a>
+                <a href="/">Team</a>
+                <a href="/">Contact</a>
+            </div>
+            <div class="menu1">
+                <a href="/">Home</a>
+                <a href="/">Features</a>
+                <a href="/">Works</a>
+                <a href="/">Team</a>
+                <a href="/">Contact</a>
             </div>
         </div>
     </div>
+<div class="wrapper">
     <div class="header">
         <div class="header-container">
             <div class="header-box">
@@ -195,7 +208,7 @@
     <div class="discuss">
         <div class="discuss-container">
             <div class="double-header">
-                <div class="double-header-label">SOME FUN FACTS</div>
+                <div class="double-header-label">LET’S DISCUSS</div>
             </div>            
             <div class="double-heart-container work-heart"><div class="shape"></div><img src="img/heart.png" alt="heart.png"><div class="shape"></div></div>
             <div class="double-label">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</div>
@@ -271,6 +284,8 @@ exclusive for kreativeshowcase</div>
         </div>
     </div>
 
+</div>
+
 
 
 
@@ -281,6 +296,19 @@ exclusive for kreativeshowcase</div>
     <div class="menu-fon"></div>
 
 <script src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.burger-button').click(function(){
+            $('.menu1').fadeIn();
+        });
+
+        $('.wrapper').click(function(){
+                    $('.menu1').fadeOut();
+                });    
+    });
+
+    
+</script>
 <script>
       function initMap() {
         var uluru = {lat: 53.541621, lng: 49.364783};
@@ -299,6 +327,9 @@ exclusive for kreativeshowcase</div>
     </script>
 <script type="text/javascript">
     $(document).ready(function(){
+
+
+
 
         /* --- открытие меню --- */
         $('#open-menu').click(function(){

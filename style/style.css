@@ -15,6 +15,7 @@ body{
 /* --- топ хедер --- */
 .top-header{
   position: relative;
+  z-index: 999;
   width: 100%;
   background-color: rgba(16,22,54,0.2);
   height: 70px;  
@@ -60,6 +61,26 @@ body{
   border-top: 2px solid transparent;
 }
 .menu a:hover{
+  border-top-color: #32b0ee;
+}
+
+.menu1{
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+  display: none;
+}
+.menu1 a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;  
+  padding: 0px 15px;
+  margin-top: -2px;
+  border-top: 2px solid transparent;
+}
+.menu1 a:hover{
   border-top-color: #32b0ee;
 }
 /* --- хедер --- */
@@ -161,11 +182,12 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 .features-content{
   display: flex;  
-  justify-content: center;  
+  justify-content: center;
+  margin-top: 60px;  
 }
 .features-content-block{
   display: flex;
@@ -173,7 +195,7 @@ body{
   color: #062033;
 }
 .features-block-logo{
-  padding: 0px 15px;
+  /*padding: 0px 15px;*/
 }
 .features-block-header{
   font-size: 20px;
@@ -200,10 +222,12 @@ body{
   background-color: black;
 }
 .feat-dot{
-  margin-bottom: 50px;
+  margin-top: 80px;
+  /*margin-bottom: 50px;*/
 }
 .feat-heart{
-  margin-top: -70px;
+  /*margin-top: -70px;*/  
+  margin-top: 25px;
 }
 
 /* --- works --- */
@@ -245,6 +269,9 @@ body{
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 35px;
+}
+.works-img img{
+  max-width: 100%;
 }
 .work-heart{
   margin-top: 25px;
@@ -325,7 +352,6 @@ body{
   width: 100%;
   display: flex;
   justify-content: space-between;  
-  flex-wrap: wrap;
 }
 .facts-block{
   display: flex;
@@ -340,14 +366,17 @@ body{
   justify-content: center;
   align-items: center;
   border: 2px solid #6d7882; 
-  border-radius: 65px; 
+  border-radius: 65px;
+  transition: 0.5s ease-in-out; 
 }
 .facts-block-header{
+  transition: 0.5s ease-in-out;
   font-size: 60px;
   font-weight: 600;
   text-align: center;
 }
 .facts-block-label{
+  transition: 0.5s ease-in-out;
   font-size: 18px;
   text-align: center;
 }
@@ -373,9 +402,9 @@ body{
   justify-content: space-between;
 }
 .hello-adress-container{
-  max-width: 270px;
+  width: 270px;
   text-align: left;
-  height: 205px;
+  min-height: 205px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -440,11 +469,14 @@ body{
   width: 140px;  
 }
 .hello-social{
-  height: 200px;
+  min-height: 200px;
   width: 70px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/  
+}
+.hello-social a + a{
+  margin-top: 20px;
 }
 .discuss-map{
   margin-top: 100px;
@@ -471,7 +503,6 @@ body{
 }
 .footer-logo-container{
   width: 270px;
-  height: 185px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -486,7 +517,6 @@ body{
 
 .footer-subscribe-container{
   width: 270px;
-  height: 170px;  
   text-align: left;
 }
 .subscribe-header{
@@ -511,7 +541,6 @@ body{
 
 .footer-explore-container{
   width: 250px;
-  height: 170px;  
   text-align: left;   
 }
 .explore-header{
@@ -565,11 +594,6 @@ body{
   color: #000
 }
 
-
-
-
-
-
 /* --- общие блоки --- */
 
 .double-header{
@@ -600,4 +624,324 @@ body{
   height: 1px;
   border: 0.5px solid #e6e8ea;
 }
+
+/* --- бурегр меню --- */
+.burger-button{
+  cursor: pointer;
+  display: none;
+}
+.burger-button span{
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  border-radius: 5px; 
+  display: none; 
+}
+
+/* --- адаптив --- */
+@media screen and (min-width: 421px) {  
+  .menu1{  
+      display: none !important;
+  }
+}
+@media screen and (max-width: 1170px) {
+  /* --- footer --- */
+  .footer-container{
+    flex-wrap: wrap;
+    padding: 0px 10px;
+  }
+  .footer-logo-container{
+    width: 50%;
+  }
+  .footer-subscribe-container{
+    width: 50%;
+  }
+  .footer-explore-container{
+    width: 50%;
+  }
+  .footer-created-container{
+    width: 50%;
+  }
+  .explore-header{
+    text-align: center;
+  }
+  .explore-link-container{
+    justify-content: center;
+  }
+  .explore-link-left{
+    margin-right: 10px;
+  }
+  .footer-created-container{
+    align-items: center;
+  }
+
+  /* --- discuss --- */
+  .discuss-container{
+    padding: 0px 10px;
+  }
+  .hello-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .hello-adress-container{
+    width: 95%;
+    text-align: center;
+    min-height: 140px;
+    margin-bottom: 10px;
+  }
+  .hello-social{
+    margin-top: 20px;
+    flex-direction: row;
+    min-height: 50px;
+    width: 100%;
+    justify-content: center;
+  }  
+  .hello-social a + a{    
+    margin: 0;
+    margin-left: 10px;
+  }
+  .hello-form-container{
+    width: 100%;
+  }
+  .form-input-double{
+    flex-direction: column;
+    margin: 0;
+  }
+  .form-input-double input{
+    width: 100%;
+  }
+  .form-header{
+    text-align: center;
+  }
+  .discuss-map{
+    margin-top: 20px;
+  }
+
+  /* --- facts --- */
+  .facts-content-container{
+    padding: 0 10px;
+  }
+
+  /* --- team --- */
+  .team-container{
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+  .team-content{
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .team-block{
+    margin-top: 20px;
+    width: 50%;
+  }
+  .team-block img{
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* --- footer --- */
+  .footer-container{
+    flex-direction: column;
+  }
+  .footer-logo-container{
+    margin-top: 20px;
+    width: 95%;
+  }
+  .footer-subscribe-container{
+    margin-top: 20px;
+    width: 95%;
+  }
+  .footer-explore-container{
+    margin-top: 20px;
+    width: 95%;
+  }
+  .footer-created-container{
+    width: 95%;
+  }
+
+  /* --- facts --- */
+  .facts-block-container{
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  .facts-block{
+    width: 50%;
+  }
+  .facts-block-img{
+    margin: 0;      
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+  }
+  .facts-block-img img{
+    width: 25px;
+  }
+  .facts-block-header{
+    font-size: 35px;
+  }
+  .facts-block-label{
+    font-size: 12px;
+  }
+
+  /* --- одинаковые блоки --- */
+  .double-header{
+    margin-top: 20px;
+  }
+
+  /* --- team --- */
+  .team-block{
+    width: 100%;
+  }
+
+  /* --- works --- */
+  .works{
+    padding: 0px 10px;
+  }
+  .works-container{
+    width: 100%;
+  }
+  .works-filter{
+    flex-wrap: wrap;
+  }
+
+  /* -- features --- */
+  .features-container{
+    padding: 0px 10px;
+  }
+  .features-content{
+    flex-direction: column;
+  }
+  .features-content-block{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .tag{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* --- footer --- */
+  .explore-link-container{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .explore-link-left{
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  /* --- discuss --- */
+  .hello-social{
+    flex-direction: column;
+  }
+  .hello-social a + a{
+    margin-top: 20px;
+  }
+
+  /* --- одинаковые блоки --- */
+  .double-heart-container{
+    width: 100%;
+  }
+
+  /* --- facts --- */
+  .facts-block-img{  
+  }
+
+  /* --- works --- */
+  .works-img{
+    display: block;
+  }
+
+  /* --- features --- */
+  .features-content-block{
+    flex-direction: column;
+  }
+  .features-block-content{
+    width: 100%;
+  }
+  .features-block-text{
+    text-align: center;
+  }
+  .features-block-header{
+    text-align: center;
+  }
+  .features-block-logo{
+    text-align: center;
+  }
+  .feat-dot{
+    margin-bottom: 10px;
+  }
+
+  /* --- header --- */
+  .header-container{
+    padding: 0px;
+  }
+  .header-label-1{
+    font-size: 50px;
+  }
+  .header-label-2{
+    font-size: 36px;
+  }
+  .header-label-3{
+    font-size: 14px;
+  }
+  .vertical-dots{
+    margin-right: 5px;
+  }
+  .header-label{
+    margin-bottom: 180px;
+  }
+
+  /* --- top-header --- */
+  .menu{
+    display: none;
+  }
+  .tag{
+    display: none;
+  }
+  .logo{
+    margin-right: 20px;
+  }
+  .logo-content{
+    padding: 0px 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .burger-button{
+    display: block;
+  }
+  .burger-button span{
+    display: flex;
+  }
+  
+  .top-header-content{
+    flex-direction: column;
+  }
+
+  /* --- мобил меню --- */
+
+  .menu1{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+  }
+  .menu1 a{
+    background-color: rgba(16,22,54,0.2);
+    width: 100%;
+    justify-content: center;
+    height: 50px;
+  }
+
+
+}
+
 
